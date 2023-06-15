@@ -8,9 +8,9 @@ from pkg_resources import get_distribution
 
 sys.path.insert(0, Path(__file__).parents[2].resolve().as_posix())
 
-project = "testdata"
-copyright = "Copyright Holder"
-version = get_distribution("testdata").version
+project = "g4edge-testdata"
+copyright = "G4Edge"
+version = get_distribution("g4edge-testdata").version
 
 extensions = [
     "sphinx.ext.autodoc",

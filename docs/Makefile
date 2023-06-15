@@ -8,7 +8,7 @@ all: apidoc
 apidoc: clean-apidoc
 	sphinx-apidoc --private --module-first --force \
       --output-dir "$(SOURCEDIR)/api" \
-      ../src/g4edge-testdata ../src/g4edge-testdata/_version.py
+      ../src/g4edgetestdata ../src/g4edgetestdata/_version.py
 
 clean-apidoc:
 	rm -rf "$(SOURCEDIR)/api"
