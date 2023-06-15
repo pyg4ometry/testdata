@@ -1,5 +1,6 @@
 # g4edge test data
 
+[![PyPI](https://img.shields.io/pypi/v/g4edge-testdata?logo=pypi)](https://pypi.org/project/g4edge-testdata/)
 ![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/g4edge/testdata?logo=git)
 [![GitHub Workflow Status](https://img.shields.io/github/checks-status/g4edge/testdata/main?label=main%20branch&logo=github)](https://github.com/g4edge/testdata/actions)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
