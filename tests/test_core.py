@@ -5,7 +5,7 @@ from git import GitCommandError
 from g4edgetestdata import G4EdgeTestData
 
 g4data = G4EdgeTestData()
-# ldata.checkout("49c7bdc")
+g4data.checkout("4bfcae3")
 
 
 def test_get_file():
