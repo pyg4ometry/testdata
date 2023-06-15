@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import pytest
 from git import GitCommandError
+
 from g4edgetestdata import G4EdgeTestData
 
 g4data = G4EdgeTestData()
