@@ -7,3 +7,40 @@
 ![GitHub issues](https://img.shields.io/github/issues/g4edge/testdata?logo=github)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/g4edge/testdata?logo=github)
 ![License](https://img.shields.io/github/license/g4edge/testdata)
+
+Install (with pip):
+
+```console
+$ python -m pip install g4edge-testdata
+```
+
+### Usage
+
+Instantiating a `G4EdgeTestData` object:
+
+```python
+from g4edgetestdata import G4EdgeTestData
+
+g4data = G4EdgeTestData()
+```
+
+Clones [g4edge/testdata](https://github.com/g4edge/testdata) in a temporary
+location (not preserved across system reboots), unless the environment variable
+`G4EDGE_TESTDATA` is set and points to the location of an existing
+g4edge/testdata clone.
+
+Alternatively, the path to an existing g4edge/testdata clone can be provided to
+the class constructor:
+
+```python
+from g4edgetestdata import G4EdgeTestData
+
+g4data = G4EdgeTestData("path/to/g4edge/testdata")
+```
+
+Access to data files is provided through the square brackets operator:
+
+```pycon
+>>> g4data["gdml/001_box.gdml"]
+PosixPath('/tmp/g4edge-testdata-gipert/data/gdml/001_box.gdml')
+```
