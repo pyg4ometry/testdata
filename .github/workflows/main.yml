@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main
-      - 'releases/**'
+      - "releases/**"
   pull_request:
   release:
 
@@ -13,29 +13,28 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-
   build-and-test:
     name: Test g4edge-testdata with Python
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
       matrix:
-        python-version: ['3.7', '3.8', '3.9', '3.10', '3.11']
-        os: [ubuntu-latest, macOS-latest, windows-latest]
+        python-version: ["3.7", "3.8", "3.9", "3.10", "3.11"]
+        os: [ubuntu-latest, macOS-latest]
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v2
-      with:
-        python-version: ${{ matrix.python-version }}
-    - name: Get dependencies and install g4edge-testdata
-      run: |
-        python -m pip install --upgrade pip wheel setuptools
-        python -m pip install --upgrade .[test]
-    - name: Run unit tests
-      run: |
-        python -m pytest
+      - uses: actions/checkout@v2
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Get dependencies and install g4edge-testdata
+        run: |
+          python -m pip install --upgrade pip wheel setuptools
+          python -m pip install --upgrade .[test]
+      - name: Run unit tests
+        run: |
+          python -m pytest
 
   test-coverage:
     name: Calculate and upload test coverage
@@ -46,7 +45,7 @@ jobs:
           fetch-depth: 2
       - uses: actions/setup-python@v2
         with:
-          python-version: '3.10'
+          python-version: "3.10"
 
       - name: Generate Report
         run: |
@@ -65,7 +64,7 @@ jobs:
           fetch-depth: 0
       - uses: actions/setup-python@v2
         with:
-          python-version: '3.10'
+          python-version: "3.10"
       - name: Setup build environment
         run: |
           python -m pip install --upgrade pip wheel setuptools

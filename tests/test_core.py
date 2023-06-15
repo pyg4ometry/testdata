@@ -1,5 +1,7 @@
-import g4edge-testdata
+from __future__ import annotations
+
+import g4edgetestdata
 
 
 def test_core():
-    assert g4edge-testdata.hello_world() == "Hello World!"
+    assert g4edgetestdata.hello_world() == "Hello World!"
