@@ -7,7 +7,7 @@ BEAM
 * Define the beam position
 BEAMPOS
 GEOBEGIN                                                              COMBNAME
-    0    0          
+    0    0
 BOX box        0. 0. 0. 100. 0. 0. 0. 100. 0. 0. 0. 100.
 BOX blackhole  -100. -100. -100. 300. 0. 0. 0. 300. 0. 0. 0. 300.
 END

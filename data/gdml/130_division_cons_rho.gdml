@@ -19,7 +19,7 @@
       <box name="WorldBox" x="1000" y="1000" z="1000"/>
       <cone name="Cone" rmin1="40" rmax1="100" rmin2="10" rmax2="70" z="100" deltaphi="2*pi" lunit="mm"/>
    </solids>
-   
+
    <structure>
       <volume name="lvCone">
          <materialref ref="ALU"/>

@@ -1,7 +1,7 @@
 TITLE
 If this works then there's a box.
 GEOBEGIN                                                              COMBNAME
-    0    0          
+    0    0
 * Set the defaults for precision simulations
 #define first
 #define second
@@ -11,11 +11,11 @@ RPP bb         -200. 200. -200. 200. -200. 200.
 TRC bb1        0.0 -35. 0.0 0.0 80. 0.0 100. 5.
 #elif blah
 SPH bb1        0.0 0.0 0.0 25.
-#elif sphere 
+#elif sphere
 #else
 RPP bb1        -50. 50. -50. 50. -50. 50.
 #endif
-#endif  
+#endif
 END
 outside      5 +bb -bb1
 inside       5 +bb1

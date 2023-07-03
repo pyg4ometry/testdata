@@ -23,7 +23,7 @@
 	<zplane rmin="1" rmax="9" z="20" />
       </polycone>
    </solids>
-   
+
    <structure>
       <volume name="lvPolycone">
          <materialref ref="ALU"/>

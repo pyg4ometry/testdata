@@ -7,11 +7,11 @@ BEAM
 * Define the beam position
 BEAMPOS
 GEOBEGIN                                                              COMBNAME
-    0    0          
+    0    0
 RCC target     0.0 0.0 -5. 0.0 0.0 10. 5.
 $start_transform -Rotdefi1
 RCC targRepl   0.0 0.0 -5. 0.0 0.0 10. 5.
-$end_transform 
+$end_transform
 RPP blackhole  -50. 50. -50. 50. -50. 50.
 END
 blackhol     5 +blackhole -target -targRepl

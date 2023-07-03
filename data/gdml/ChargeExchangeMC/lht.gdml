@@ -5,7 +5,7 @@
 
     <!-- id: 'lht.gdml', geometry of liquid hydrogen target -->
 
-    <define> 
+    <define>
         <!-- all length values in cm and angles in deg! -->
         <constant name="FullCircle" value="360.0"/>
         <!-- we define EPSILON to struggle with Geant4 -->
@@ -253,7 +253,7 @@
                TargetWindowCoverThickness/2"
             z="0.0"
             unit="cm"/>
-    </define> 
+    </define>
 
     <materials>
         <element name="Hydrogen" formula="H" Z="1">
@@ -634,4 +634,3 @@
     </setup>
 
 </gdml>
-

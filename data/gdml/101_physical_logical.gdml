@@ -7,8 +7,8 @@
   <constant name="wbz" value="200.0"/>
 
   <constant name="bx" value="10.0"/>
-  
-  <position name="center"    x="0"   y="0"   z="0"/> 
+
+  <position name="center"    x="0"   y="0"   z="0"/>
   <rotation name="identity"  x="0"   y="0"   z="0"/>
 
   <position name="boxpos1"   x="-bx" y="0"   z="0"/>
@@ -22,7 +22,7 @@
   <position name="layerpos1" x="0"   y="0"   z="-bx"/>
   <position name="layerpos2" x="0"   y="0"   z="0"/>
   <position name="layerpos3" x="0"   y="0"   z="bx"/>
-  
+
 </define>
 
 <materials>
@@ -51,17 +51,17 @@
   <box name="box"      x="bx"   y="bx"   z="bx"  />
   <box name="row"      x="3*bx" y="bx"   z="bx" />
   <box name="layer"    x="3*bx" y="3*bx" z="bx" />
-  <box name="cube"     x="3*bx" y="3*bx" z="3*bx" />  
+  <box name="cube"     x="3*bx" y="3*bx" z="3*bx" />
 </solids>
 
 <structure>
   <!-- Structure  comment -->
-  <volume name="boxVol"> 
+  <volume name="boxVol">
     <materialref ref="Air"/>
     <solidref ref="box"/>
   </volume>
 
-  <volume name="rowVol"> 
+  <volume name="rowVol">
     <materialref ref="Air"/>
     <solidref ref="row"/>
 
@@ -84,7 +84,7 @@
     </physvol>
   </volume>
 
-  <volume name="layerVol"> 
+  <volume name="layerVol">
     <materialref ref="Air"/>
     <solidref ref="layer"/>
 
@@ -104,10 +104,10 @@
        <volumeref ref="rowVol"/>
        <positionref ref="rowpos3"/>
        <rotationref ref="identity"/>
-    </physvol>    
-  </volume>      
-   
-  <volume name="cubeVol"> 
+    </physvol>
+  </volume>
+
+  <volume name="cubeVol">
     <materialref ref="Air"/>
     <solidref ref="cube"/>
 
@@ -127,18 +127,18 @@
        <volumeref ref="layerVol"/>
        <positionref ref="layerpos3"/>
        <rotationref ref="identity"/>
-    </physvol>    
-  </volume>    
+    </physvol>
+  </volume>
 
   <volume name="World">
     <materialref ref="Air"/>
     <solidref ref="WorldBox"/>
 
-    <physvol>       
+    <physvol>
        <volumeref ref="cubeVol"/>
        <positionref ref="center"/>
        <rotationref ref="identity"/>
-    </physvol>      
+    </physvol>
   </volume>
 </structure>
 

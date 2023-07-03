@@ -9,8 +9,8 @@
   <constant name="bx" value="10.0"/>
   <constant name="by" value="10.0"/>
   <constant name="bz" value="10.0"/>
-  
-  <position name="center"   x="0" y="0" z="0"/> 
+
+  <position name="center"   x="0" y="0" z="0"/>
   <rotation name="identity" x="0" y="0" z="0"/>
 
   <position name="boxpos1" x="-2.5*bx" y="0" z="0"/>
@@ -97,17 +97,17 @@
     <materialref ref="Air"/>
     <solidref ref="WorldBox"/>
 
-    <physvol>       
+    <physvol>
        <volumeref ref="box0Vol"/>
        <positionref ref="center"/>
        <rotationref ref="identity"/>
-    </physvol>      
+    </physvol>
 
     <physvol>
        <volumeref ref="box0Vol"/>
        <positionref ref="pos1"/>
        <rotationref ref="rot1"/>
-    </physvol>      
+    </physvol>
   </volume>
 </structure>
 

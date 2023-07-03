@@ -1,5 +1,5 @@
 GEOBEGIN                                                              COMBNAME
-    0    0          
+    0    0
 $start_transform sphrotx
 SPH sphx       0. 0. 0. 5.
 $end_transform

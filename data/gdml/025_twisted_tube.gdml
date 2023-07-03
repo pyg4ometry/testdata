@@ -7,7 +7,7 @@
   <constant name="wbz" value="100.0"/>
 
   <constant name="ttbeir" value="10.0"/>
-  <constant name="ttbeor" value="40.0"/>  
+  <constant name="ttbeor" value="40.0"/>
   <constant name="ttbz" value="60.0"/>
   <constant name="ttbphi" value="3*pi/2"/>
   <constant name="ttbtwist" value="1"/>

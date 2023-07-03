@@ -31,13 +31,13 @@
       <solidref ref="MotherCube"/>
       <replicavol number="8">
         <volumeref ref="lvCube"/>
-        <replicate_along_axis> 
+        <replicate_along_axis>
         <direction  x="1" />
         <width value="100" unit="mm"/>
         <offset value="0" unit="mm"/>
       </replicate_along_axis>
      </replicavol>
-      
+
     </volume>
     <volume name="TOP">
       <materialref ref="AIR"/>

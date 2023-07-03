@@ -31,13 +31,13 @@
       <solidref ref="motherTube"/>
       <replicavol number="8">
         <volumeref ref="lvTube"/>
-        <replicate_along_axis> 
+        <replicate_along_axis>
           <direction  phi="1" />
           <width value="2*pi/8.0" unit="mm"/>
           <offset value="0" unit="mm"/>
 	</replicate_along_axis>
      </replicavol>
-      
+
     </volume>
     <volume name="TOP">
       <materialref ref="AIR"/>

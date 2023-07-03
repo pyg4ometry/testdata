@@ -45,7 +45,7 @@
          <physvol>
             <volumeref ref="VExtruded"/>
             <scale name="ScalePNP" x="+1" y="-1" z="+1"/>
-         </physvol> 
+         </physvol>
          <physvol>
             <volumeref ref="VExtruded"/>
             <scale name="ScaleNNP" x="-1" y="-1" z="+1"/>

@@ -7,7 +7,7 @@ BEAM
 * Define the beam position
 BEAMPOS
 GEOBEGIN                                                              COMBNAME
-    0    0          
+    0    0
 $start_translat 0 0 -100
 QUA parab      0.06 0.0 0.0 0.0 0.0 0.0 0.0 1. 0.0 -20.
 XYP end1       100.

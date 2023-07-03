@@ -20,7 +20,7 @@
       <box name="Cube" x="100" y="100" z="100"/>
       <para name = "Para" x="50" y="50" z="50" alpha="0.2" theta="0.2" phi="0.2" aunit="rad" lunit="mm"/>
    </solids>
-   
+
    <structure>
       <volume name="lvPara">
          <materialref ref="ALU"/>

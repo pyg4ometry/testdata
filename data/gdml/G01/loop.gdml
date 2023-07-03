@@ -30,7 +30,7 @@
          <materialref ref="ALU"/>
          <solidref ref="Box"/>
       </volume>
-    
+
       <volume name="TOP">
          <materialref ref="AIR"/>
          <solidref ref="WorldBox"/>

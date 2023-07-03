@@ -1,7 +1,7 @@
 TITLE
 wooo a title
 GEOBEGIN                                                              COMBNAME
-    0    0          
+    0    0
 PLA yzplo1     1. 0. 0. 0. 0. 0.
 PLA yzphig1    1. 0. 0. 10. 0. 0.
 PLA xzplo1     0. 1. 0. 0. 0. 0.

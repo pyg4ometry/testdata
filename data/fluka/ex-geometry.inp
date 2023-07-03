@@ -1,8 +1,8 @@
 * sigma in mm
 #define fwhm -.235482
-*#define quad-on 
-#define DFFD 
-*#define FDDF 
+*#define quad-on
+#define DFFD
+*#define FDDF
 TITLE
 Play with Geometry
 *---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
@@ -37,7 +37,7 @@ $start_translat 0.0 0.0 -3000.0
 RPP quadyoke   -10.0 10.0 -10.0 10.0 -8.5 8.5
 *   . pipe
 ZEC quad_bp    0.0 0.0 3.0 1.5
-$end_translat 
+$end_translat
 * ------------------------------------------------------------------------
 * line
 * ------------------------------------------------------------------------
@@ -46,26 +46,26 @@ $end_translat
 $start_transform -QUAD___1
 $start_translat 0.0 0.0 -3000.0
 RPP quad___1   -10.0 10.0 -10.0 10.0 -8.5 8.5
-$end_translat 
-$end_transform 
+$end_translat
+$end_transform
 *
 $start_transform -QUAD___2
 $start_translat 0.0 0.0 -3000.0
 RPP quad___2   -10.0 10.0 -10.0 10.0 -8.5 8.5
-$end_translat 
-$end_transform 
+$end_translat
+$end_transform
 *
 $start_transform -QUAD___3
 $start_translat 0.0 0.0 -3000.0
 RPP quad___3   -10.0 10.0 -10.0 10.0 -8.5 8.5
-$end_translat 
-$end_transform 
+$end_translat
+$end_transform
 *
 $start_transform -QUAD___4
 $start_translat 0.0 0.0 -3000.0
 RPP quad___4   -10.0 10.0 -10.0 10.0 -8.5 8.5
-$end_translat 
-$end_transform 
+$end_translat
+$end_transform
 END
 * outer blackhole:
 OUTERBLK     5 +outer -inner -parking
@@ -116,13 +116,13 @@ ASSIGNMA      VACUUM  DIP_BPVC                           1.0
 ASSIGNMA      VACUUM  DIP_OUT_
 * quadrupole:
 ASSIGNMA        IRON  QUADYOKE
-#if quad-on 
+#if quad-on
 ASSIGNMA      VACUUM  QUADBPVC                            1.
 MGNFIELD        30.0     0.001      0.01       0.0       0.0       0.0
-#else  
+#else
 ASSIGNMA      VACUUM  QUADBPVC
 MGNFIELD        30.0     0.001      0.01       0.0   1.66782       0.0
-#endif  
+#endif
 ASSIGNMA      VACUUM  QUAD___1
 ASSIGNMA      VACUUM  QUAD___2
 ASSIGNMA      VACUUM  QUAD___3
@@ -130,27 +130,27 @@ ASSIGNMA      VACUUM  QUAD___4
 *---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
 * Transformation for quad 1:
 ROT-DEFI        200.       0.0     -90.0     300.0       0.0       0.0QUAD___1
-#if DFFD 
+#if DFFD
 ROT-DEFI         0.0       0.0      90.0       0.0       0.0       0.0QUAD___1
-#endif  
+#endif
 ROT-DEFI         0.0       0.0       0.0       0.0       0.0   -3000.0QUAD___1
 * Transformation for quad 2:
 ROT-DEFI        200.       0.0     -90.0     500.0       0.0       0.0QUAD___2
-#if FDDF 
+#if FDDF
 ROT-DEFI         0.0       0.0      90.0       0.0       0.0       0.0QUAD___2
-#endif  
+#endif
 ROT-DEFI         0.0       0.0       0.0       0.0       0.0   -3000.0QUAD___2
 * Transformation for quad 3:
 ROT-DEFI        200.       0.0     -90.0     700.0       0.0       0.0QUAD___3
-#if FDDF 
+#if FDDF
 ROT-DEFI         0.0       0.0      90.0       0.0       0.0       0.0QUAD___3
-#endif  
+#endif
 ROT-DEFI         0.0       0.0       0.0       0.0       0.0   -3000.0QUAD___3
 * Transformation for quad 4:
 ROT-DEFI        200.       0.0     -90.0     900.0       0.0       0.0QUAD___4
-#if DFFD 
+#if DFFD
 ROT-DEFI         0.0       0.0      90.0       0.0       0.0       0.0QUAD___4
-#endif  
+#endif
 ROT-DEFI         0.0       0.0       0.0       0.0       0.0   -3000.0QUAD___4
 * Transformation for scorings:
 ROT-DEFI         0.0       0.0       0.0       0.0       0.0     210.0beamupst

@@ -10,7 +10,7 @@
   <constant name="rmax1" value="20.0"/>
   <constant name="rmin2" value="5"/>
   <constant name="rmax2" value="10"/>
-  
+
   <constant name="z" value="50"/>
   <constant name="deltaphi" value="1.5*pi"/>
 

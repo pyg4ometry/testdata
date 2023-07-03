@@ -19,7 +19,7 @@
       <box name="WorldBox" x="1000" y="1000" z="1000"/>
       <tube name="tube" rmin="25"  rmax="50" z="100" startphi="pi" deltaphi="pi" lunit="mm" aunit="rad"/>
    </solids>
-   
+
    <structure>
       <volume name="lvTube">
          <materialref ref="ALU"/>

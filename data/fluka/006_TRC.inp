@@ -7,7 +7,7 @@ BEAM             0.0
 * Define the beam position
 BEAMPOS
 GEOBEGIN                                                              COMBNAME
-    0    0          
+    0    0
 RPP blackhole  -200. 200. -200. 200. -200. 200.
 TRC trc        0.0 0.0 0.0 0.0 100. 0.0 100. 50.
 END

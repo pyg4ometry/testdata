@@ -69,7 +69,7 @@
     <physvol>
       <volumeref ref="box2Vol"/>
       <position x="0" y="0" z="50"/>
-      <rotationref ref="identity"/>      
+      <rotationref ref="identity"/>
     </physvol>
   </volume>
 </structure>
