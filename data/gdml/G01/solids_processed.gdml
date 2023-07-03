@@ -1,0 +1,388 @@
+<?xml version="1.0" ?>
+<gdml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://service-spi.web.cern.ch/service-spi/app/releases/GDML/schema/gdml.xsd">
+	<define>
+		<constant name="HALFPI" value="pi/2."/>
+		<constant name="PI" value="1.*pi"/>
+		<constant name="TWOPI" value="2.*pi"/>
+		<expression name="customangle">2*(HALFPI+0.2*PI)</expression>
+		<position name="center" x="0" y="0" z="0" unit="mm"/>
+		<rotation name="identity" x="0" y="0" z="0" unit="rad"/>
+		<position name="shiftbyx" x="-500" y="0.0" z="0.0" unit="mm"/>
+		<position name="pos1" x="-250" y="0.0" z="0.0" unit="mm"/>
+		<position name="pos2" x="-125" y="0.0" z="0.0" unit="mm"/>
+		<position name="pos3" x="125" y="0.0" z="0.0" unit="mm"/>
+		<position name="pos4" x="250" y="0.0" z="0.0" unit="mm"/>
+		<position name="pos11" x="-250" y=" 125" z="0.0" unit="mm"/>
+		<position name="pos21" x="-125" y=" 125" z="0.0" unit="mm"/>
+		<position name="pos31" x=" 125" y=" 125" z="0.0" unit="mm"/>
+		<position name="pos41" x=" 250" y=" 125" z="0.0" unit="mm"/>
+		<position name="pos412" x=" 250" y=" 225" z="0.0" unit="mm"/>
+		<position name="pos51" x=" 550" y=" 125" z="0.0" unit="mm"/>
+		<position name="pos61" x=" 550" y="-125" z="0.0" unit="mm"/>
+		<position name="pos71" x=" 550" y=" 0" z="0.0" unit="mm"/>
+		<position name="pos81" x="-550" y=" 125" z="0.0" unit="mm"/>
+		<position name="pos91" x="-550" y="-125" z="0.0" unit="mm"/>
+		<position name="pos101" x="-550" y="0.0" z="0.0" unit="mm"/>
+		<position name="pos201" x=" 750" y=" 0" z="0.0" unit="mm"/>
+		<position name="pos301" x=" 750" y=" 125" z="0.0" unit="mm"/>
+		<position name="pos401" x=" 750" y="-125" z="0.0" unit="mm"/>
+		<position name="pos501" x="-750" y="-125" z="0.0" unit="mm"/>
+		<position name="pos502" x="-750" y="-225" z="0.0" unit="mm"/>
+		<position name="pos601" x="-750" y=" 125" z="0.0" unit="mm"/>
+		<position name="pos701" x="-750" y=" 0" z="0.0" unit="mm"/>
+		<position name="pos801" x="950" y=" 125" z="0.0" unit="mm"/>
+		<position name="pos901" x="950" y="-125" z="0.0" unit="mm"/>
+		<position name="pos1001" x="950" y="0" z="0.0" unit="mm"/>
+		<position name="pos1002" x="950" y="125" z="0.0" unit="mm"/>
+		<position name="pos1003" x="950" y="-125" z="0.0" unit="mm"/>
+		<rotation name="rotatebyx" x="HALFPI" y="0.0" z="0.0" unit="rad"/>
+		<rotation name="rotatebyall" x="HALFPI" y="PI" z="TWOPI" unit="rad"/>
+		<position name="v0" x="10" y="10" z="0" unit="mm"/>
+		<position name="v1" x="-10" y="10" z="0" unit="mm"/>
+		<position name="v2" x="0" y="0" z="20" unit="mm"/>
+		<position name="v3" x="-10" y="-10" z="0" unit="mm"/>
+		<position name="v4" x="10" y="-10" z="0" unit="mm"/>
+		<quantity name="ro" value="1234.00" type="density" unit="g/cm3"/>
+		<quantity name="sizeoft500" value="500.0" type="length" unit="mm"/>
+		<quantity name="wextent" value="10000.0" type="length" unit="mm"/>
+		<position name="shiftbysizeoft500" x="500.0" y="0.0" z="0.0" unit="mm"/>
+		<position name="unionidentitypos" x="25." y="0.0" z="0.0" unit="mm"/>
+		<position name="testtet_v1" x="10" y="-10" z="0"/>
+		<position name="testtet_v2" x="-10" y="-10" z="0"/>
+		<position name="testtet_v3" x="-10" y="10" z="0"/>
+		<position name="testtet_v4" x="0" y="0" z="20"/>
+	</define>
+	<materials>
+		<element name="Hydrogen" formula="H" Z="1">
+			<atom value="1.01"/>
+		</element>
+		<element name="Oxygen" formula="O" Z="8">
+			<atom value="16.0"/>
+		</element>
+		<element name="Nitrogen" formula="N" Z="7">
+			<atom value="14.01"/>
+		</element>
+		<element name="Lead" formula="Pb" Z="82">
+			<atom value="207.2"/>
+		</element>
+		<material name="Al" Z="13">
+			<D value="2.7"/>
+			<atom value="26.98"/>
+		</material>
+		<material name="Water">
+			<D value="1.0"/>
+			<composite ref="Hydrogen" n="2"/>
+			<composite ref="Oxygen" n="1"/>
+		</material>
+		<material name="Air">
+			<D value="1.29"/>
+			<fraction ref="Nitrogen" n="0.7"/>
+			<fraction ref="Oxygen" n="0.3"/>
+		</material>
+	</materials>
+	<solids>
+		<box name="WorldBox" x="wextent" y="wextent" z="wextent" lunit="mm"/>
+		<box name="b100" x="10.0" y="10.0" z="10.0" lunit="mm"/>
+		<box name="b500" x="50.0" y="50.0" z="50.0" lunit="mm"/>
+		<cone name="c1" rmin1="0" rmax1="22.0" rmin2="0" rmax2="33.0" z="111.0" startphi="0" deltaphi="TWOPI" lunit="mm" aunit="rad"/>
+		<para name="pa1" x="10.0" y="10.0" z="10.0" alpha="30.0" theta="30.0" phi="30.0" lunit="mm" aunit="deg"/>
+		<sphere name="s1" rmin="0" rmax="50.0" deltaphi="TWOPI" startphi="0" starttheta="0" deltatheta="PI" lunit="mm" aunit="rad"/>
+		<arb8 name="arb81" v1x="-45.0" v1y="-45.0" v2x="-45.0" v2y="45.0" v3x="45.0" v3y="45.0" v4x="45.0" v4y="-45.0" v5x="-35.0" v5y="-35.0" v6x="-35.0" v6y="35.0" v7x="35.0" v7y="35.0" v8x="35.0" v8y="-35.0" dz="50.0" lunit="mm"/>
+		<arb8 name="arb82" v1x="-45.0" v1y="-45.0" v2x="-45.0" v2y="45.0" v3x="45.0" v3y="45.0" v4x="45.0" v4y="-45.0" v5x="-35.0" v5y="-35.0" v6x="-35.0" v6y="35.0" v7x="35.0" v7y="35.0" v8x="35.0" v8y="-15.0" dz="50.0" lunit="mm"/>
+		<trap name="trap1" z="100.0" theta="60.0" phi="60.0" y1="10.0" x1="10.0" x2="10.0" alpha1="30.0" y2="10.0" x3="10.0" x4="10.0" alpha2="30.0" lunit="mm" aunit="deg"/>
+		<trd name="trd1" x1="10.0" x2="10.0" y1="10.0" y2="20.0" z="30.0" lunit="mm"/>
+		<tube name="t1000" rmin="0" rmax="100.0" z="1000.0" startphi="0" deltaphi="TWOPI" lunit="mm" aunit="rad"/>
+		<tube name="t400" rmin="0" rmax="50.0" z="200.0" startphi="0" deltaphi="customangle" lunit="mm" aunit="rad"/>
+		<tube name="t100" rmin="0" rmax="10.0" z="100.0" startphi="0" deltaphi="TWOPI" lunit="mm" aunit="rad"/>
+		<union name="u1">
+			<first ref="b500"/>
+			<second ref="b100"/>
+			<position name="u1_translation" x="25." y="0.0" z="0.0" unit="mm"/>
+		</union>
+		<subtraction name="sub1">
+			<first ref="u1"/>
+			<second ref="b100"/>
+			<position name="sub1_translation" x="-25." y="0" z="0" unit="mm"/>
+		</subtraction>
+		<polycone name="testpoly" startphi="0.0" deltaphi="360.0" lunit="mm" aunit="degree">
+			<zplane rmin="1.0" rmax="5.0" z="10.0"/>
+			<zplane rmin="10.0" rmax="30.0" z="100.0"/>
+		</polycone>
+		<genericPolycone name="testgenpoly" startphi="0.0" deltaphi="360.0" lunit="mm" aunit="degree">
+			<rzpoint r="0.0" z="10.0"/>
+			<rzpoint r="5.0" z="20.0"/>
+			<rzpoint r="0.0" z="30.0"/>
+		</genericPolycone>
+		<tessellated name="testtessel">
+			<triangular vertex1="v0" vertex2="v1" vertex3="v2" type="ABSOLUTE"/>
+			<triangular vertex1="v1" vertex2="v3" vertex3="v2" type="ABSOLUTE"/>
+			<triangular vertex1="v3" vertex2="v4" vertex3="v2" type="ABSOLUTE"/>
+			<triangular vertex1="v4" vertex2="v0" vertex3="v2" type="ABSOLUTE"/>
+			<quadrangular vertex1="v4" vertex2="v3" vertex3="v1" vertex4="v0" type="ABSOLUTE"/>
+		</tessellated>
+		<torus name="testtorus" rmin="0.0" rmax="10.0" rtor="80.0" deltaphi="TWOPI" startphi="0.0" lunit="mm" aunit="rad"/>
+		<orb name="testorb" r="50.0" lunit="mm"/>
+		<polyhedra name="testph" startphi="0." deltaphi="90." numsides="3" lunit="mm" aunit="degree">
+			<zplane rmin="1.0" rmax="5.0" z="10.0"/>
+			<zplane rmin="10.0" rmax="30.0" z="100.0"/>
+		</polyhedra>
+		<genericPolyhedra name="testgenph" startphi="0." deltaphi="90." numsides="3" lunit="mm" aunit="degree">
+			<rzpoint r="0.0" z="10.0"/>
+			<rzpoint r="5.0" z="20.0"/>
+			<rzpoint r="0.0" z="30.0"/>
+		</genericPolyhedra>
+		<hype name="testhype" rmin="10.0" rmax="30.0" z="50.0" inst="10.0" outst="20.0" lunit="mm" aunit="rad"/>
+		<eltube name="testeltube" dx="30.0" dy="50.0" dz="40.0" lunit="mm"/>
+		<ellipsoid name="testellipsoid" ax="10" by="15" cz="20" zcut1="-1E20" zcut2="4" lunit="mm"/>
+		<elcone name="testelcone" dx="1" dy="1.5" zmax="2" zcut="1.5" lunit="mm"/>
+		<paraboloid name="testparaboloid" rlo="10" rhi="15" dz="20" lunit="mm"/>
+		<tet name="testtet" vertex1="testtet_v1" vertex2="testtet_v2" vertex3="testtet_v3" vertex4="testtet_v4" lunit="mm"/>
+		<twistedbox name="ttwistedbox" PhiTwist="1" x="30" y="30" z="30" lunit="mm" aunit="rad"/>
+		<twistedtrd name="ttwistedtrd" PhiTwist="1" x1="2*9" x2="2*8" y1="2*6" y2="2*5" z="2*10" lunit="mm" aunit="rad"/>
+		<twistedtrap name="ttwistedtrap" PhiTwist="1" z="10" Theta="1" Phi="2" y1="15" x1="10" x2="10" y2="15" x3="10" x4="10" Alph="1" lunit="mm" aunit="rad"/>
+		<twistedtubs name="ttwistedtubs" endinnerrad="10" endouterrad="15" zlen="40" phi="90." twistedangle="1" lunit="mm" aunit="degree"/>
+	</solids>
+	<structure>
+		<volume name="vol0">
+			<materialref ref="Water"/>
+			<solidref ref="b100"/>
+		</volume>
+		<volume name="vol1">
+			<materialref ref="Water"/>
+			<solidref ref="c1"/>
+		</volume>
+		<volume name="vol2">
+			<materialref ref="Water"/>
+			<solidref ref="pa1"/>
+		</volume>
+		<volume name="vol3">
+			<materialref ref="Water"/>
+			<solidref ref="s1"/>
+		</volume>
+		<volume name="vol4">
+			<materialref ref="Water"/>
+			<solidref ref="trap1"/>
+		</volume>
+		<volume name="vol11">
+			<materialref ref="Water"/>
+			<solidref ref="trd1"/>
+		</volume>
+		<volume name="vol21">
+			<materialref ref="Water"/>
+			<solidref ref="t100"/>
+		</volume>
+		<volume name="vol31">
+			<materialref ref="Water"/>
+			<solidref ref="sub1"/>
+		</volume>
+		<volume name="vol41">
+			<materialref ref="Water"/>
+			<solidref ref="testpoly"/>
+		</volume>
+		<volume name="vol412">
+			<materialref ref="Water"/>
+			<solidref ref="testgenpoly"/>
+		</volume>
+		<volume name="vol51">
+			<materialref ref="Water"/>
+			<solidref ref="testellipsoid"/>
+		</volume>
+		<volume name="vol61">
+			<materialref ref="Water"/>
+			<solidref ref="testtet"/>
+		</volume>
+		<volume name="vol71">
+			<materialref ref="Water"/>
+			<solidref ref="ttwistedbox"/>
+		</volume>
+		<volume name="vol81">
+			<materialref ref="Water"/>
+			<solidref ref="ttwistedtrd"/>
+		</volume>
+		<volume name="vol91">
+			<materialref ref="Water"/>
+			<solidref ref="ttwistedtrap"/>
+		</volume>
+		<volume name="vol101">
+			<materialref ref="Water"/>
+			<solidref ref="ttwistedtubs"/>
+		</volume>
+		<volume name="vol201">
+			<materialref ref="Water"/>
+			<solidref ref="testtessel"/>
+		</volume>
+		<volume name="vol301">
+			<materialref ref="Water"/>
+			<solidref ref="testtorus"/>
+		</volume>
+		<volume name="vol401">
+			<materialref ref="Water"/>
+			<solidref ref="testorb"/>
+		</volume>
+		<volume name="vol501">
+			<materialref ref="Water"/>
+			<solidref ref="testph"/>
+		</volume>
+		<volume name="vol502">
+			<materialref ref="Water"/>
+			<solidref ref="testgenph"/>
+		</volume>
+		<volume name="vol601">
+			<materialref ref="Water"/>
+			<solidref ref="testhype"/>
+		</volume>
+		<volume name="vol701">
+			<materialref ref="Water"/>
+			<solidref ref="testeltube"/>
+		</volume>
+		<volume name="vol1001">
+			<materialref ref="Water"/>
+			<solidref ref="testelcone"/>
+		</volume>
+		<volume name="vol1002">
+			<materialref ref="Water"/>
+			<solidref ref="arb81"/>
+		</volume>
+		<volume name="vol1003">
+			<materialref ref="Water"/>
+			<solidref ref="arb82"/>
+		</volume>
+		<volume name="World">
+			<materialref ref="Air"/>
+			<solidref ref="WorldBox"/>
+			<physvol name="vol0_PV">
+				<volumeref ref="vol0"/>
+				<positionref ref="center"/>
+				<rotationref ref="identity"/>
+			</physvol>
+			<physvol name="vol1_PV">
+				<volumeref ref="vol1"/>
+				<positionref ref="pos1"/>
+				<rotationref ref="identity"/>
+			</physvol>
+			<physvol name="vol2_PV">
+				<volumeref ref="vol2"/>
+				<positionref ref="pos2"/>
+				<rotationref ref="identity"/>
+			</physvol>
+			<physvol name="vol3_PV">
+				<volumeref ref="vol3"/>
+				<positionref ref="pos3"/>
+				<rotationref ref="identity"/>
+			</physvol>
+			<physvol name="vol4_PV">
+				<volumeref ref="vol4"/>
+				<positionref ref="pos4"/>
+				<rotationref ref="identity"/>
+			</physvol>
+			<physvol name="vol11_PV">
+				<volumeref ref="vol11"/>
+				<positionref ref="pos11"/>
+				<rotationref ref="identity"/>
+			</physvol>
+			<physvol name="vol21_PV">
+				<volumeref ref="vol21"/>
+				<positionref ref="pos21"/>
+				<rotationref ref="identity"/>
+			</physvol>
+			<physvol name="vol31_PV">
+				<volumeref ref="vol31"/>
+				<positionref ref="pos31"/>
+				<rotationref ref="identity"/>
+			</physvol>
+			<physvol name="vol41_PV">
+				<volumeref ref="vol41"/>
+				<positionref ref="pos41"/>
+				<rotationref ref="identity"/>
+			</physvol>
+			<physvol name="vol412_PV">
+				<volumeref ref="vol412"/>
+				<positionref ref="pos412"/>
+				<rotationref ref="identity"/>
+			</physvol>
+			<physvol name="vol51_PV">
+				<volumeref ref="vol51"/>
+				<positionref ref="pos51"/>
+				<rotationref ref="identity"/>
+			</physvol>
+			<physvol name="vol61_PV">
+				<volumeref ref="vol61"/>
+				<positionref ref="pos61"/>
+				<rotationref ref="identity"/>
+			</physvol>
+			<physvol name="vol71_PV">
+				<volumeref ref="vol71"/>
+				<positionref ref="pos71"/>
+				<rotationref ref="identity"/>
+			</physvol>
+			<physvol name="vol81_PV">
+				<volumeref ref="vol81"/>
+				<positionref ref="pos81"/>
+				<rotationref ref="identity"/>
+			</physvol>
+			<physvol name="vol91_PV">
+				<volumeref ref="vol91"/>
+				<positionref ref="pos91"/>
+				<rotationref ref="identity"/>
+			</physvol>
+			<physvol name="vol101_PV">
+				<volumeref ref="vol101"/>
+				<positionref ref="pos101"/>
+				<rotationref ref="identity"/>
+			</physvol>
+			<physvol name="vol201_PV">
+				<volumeref ref="vol201"/>
+				<positionref ref="pos201"/>
+				<rotationref ref="identity"/>
+			</physvol>
+			<physvol name="vol301_PV">
+				<volumeref ref="vol301"/>
+				<positionref ref="pos301"/>
+				<rotationref ref="identity"/>
+			</physvol>
+			<physvol name="vol401_PV">
+				<volumeref ref="vol401"/>
+				<positionref ref="pos401"/>
+				<rotationref ref="identity"/>
+			</physvol>
+			<physvol name="vol501_PV">
+				<volumeref ref="vol501"/>
+				<positionref ref="pos501"/>
+				<rotationref ref="identity"/>
+			</physvol>
+			<physvol name="vol502_PV">
+				<volumeref ref="vol502"/>
+				<positionref ref="pos502"/>
+				<rotationref ref="identity"/>
+			</physvol>
+			<physvol name="vol601_PV">
+				<volumeref ref="vol601"/>
+				<positionref ref="pos601"/>
+				<rotationref ref="identity"/>
+			</physvol>
+			<physvol name="vol701_PV">
+				<volumeref ref="vol701"/>
+				<positionref ref="pos701"/>
+				<rotationref ref="identity"/>
+			</physvol>
+			<physvol name="vol1001_PV">
+				<volumeref ref="vol1001"/>
+				<positionref ref="pos1001"/>
+				<rotationref ref="identity"/>
+			</physvol>
+			<physvol name="vol1002_PV">
+				<volumeref ref="vol1002"/>
+				<positionref ref="pos1002"/>
+				<rotationref ref="identity"/>
+			</physvol>
+			<physvol name="vol1003_PV">
+				<volumeref ref="vol1003"/>
+				<positionref ref="pos1003"/>
+				<rotationref ref="identity"/>
+			</physvol>
+		</volume>
+	</structure>
+	<setup name="Default" version="1.0">
+		<world ref="World"/>
+	</setup>
+</gdml>

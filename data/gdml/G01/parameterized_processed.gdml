@@ -1,0 +1,92 @@
+<?xml version="1.0" ?>
+<gdml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://service-spi.web.cern.ch/service-spi/app/releases/GDML/schema/gdml.xsd">
+	<define>
+		<position name="TrackerinWorldp" x="0" y="0" z="0" unit="mm"/>
+		<rotation name="TrackerinWorldr" x="0" y="0" z="0" unit="degree"/>
+		<position name="TargetinWorldp" x="0" y="0" z="-2425" unit="mm"/>
+		<rotation name="TargetinWorldr" x="0" y="0" z="0" unit="degree"/>
+	</define>
+	<materials>
+		<element name="Nitrogen" formula="N" Z="7">
+			<atom value="14.01"/>
+		</element>
+		<element name="Oxygen" formula="O" Z="8">
+			<atom value="16.0"/>
+		</element>
+		<material name="Air">
+			<D value="0.00129"/>
+			<fraction ref="Nitrogen" n="0.7"/>
+			<fraction ref="Oxygen" n="0.3"/>
+		</material>
+		<material name="Lead" Z="82">
+			<D value="11.35"/>
+			<atom value="207.19"/>
+		</material>
+		<material name="XenonGas" Z="54">
+			<D value="0.005458"/>
+			<atom value="131.29"/>
+		</material>
+	</materials>
+	<solids>
+		<box name="world" x="5820" y="5820" z="5820" lunit="mm"/>
+		<box name="target" x="50" y="50" z="50" lunit="mm"/>
+		<box name="tracker" x="4800" y="4800" z="4800" lunit="mm"/>
+		<box name="chamber" x="2000" y="2000" z="200" lunit="mm"/>
+	</solids>
+	<structure>
+		<volume name="Chamber">
+			<materialref ref="XenonGas"/>
+			<solidref ref="chamber"/>
+		</volume>
+		<volume name="Tracker">
+			<materialref ref="Air"/>
+			<solidref ref="tracker"/>
+			<paramvol ncopies="5">
+				<volumeref ref="Chamber"/>
+				<parameterised_position_size>
+					<parameters number="1">
+						<position name="Chambercopy1pos" x="0" y="0" z="-1500" unit="mm"/>
+						<box_dimensions x="240" y="240" z="100" lunit="mm"/>
+					</parameters>
+					<parameters number="2">
+						<position name="Chambercopy2pos" x="0" y="0" z="-700" unit="mm"/>
+						<box_dimensions x="672" y="672" z="100" lunit="mm"/>
+					</parameters>
+					<parameters number="3">
+						<position name="Chambercopy3pos" x="0" y="0" z="100" unit="mm"/>
+						<box_dimensions x="1104" y="1104" z="100" lunit="mm"/>
+					</parameters>
+					<parameters number="4">
+						<position name="Chambercopy4pos" x="0" y="0" z="900" unit="mm"/>
+						<box_dimensions x="1536" y="1536" z="100" lunit="mm"/>
+					</parameters>
+					<parameters number="5">
+						<position name="Chambercopy5pos" x="0" y="0" z="1700" unit="mm"/>
+						<box_dimensions x="1968" y="1968" z="100" lunit="mm"/>
+					</parameters>
+				</parameterised_position_size>
+			</paramvol>
+		</volume>
+		<volume name="Target">
+			<materialref ref="Lead"/>
+			<solidref ref="target"/>
+		</volume>
+		<volume name="World">
+			<materialref ref="Air"/>
+			<solidref ref="world"/>
+			<physvol name="Tracker_PV">
+				<volumeref ref="Tracker"/>
+				<positionref ref="TrackerinWorldp"/>
+				<rotationref ref="TrackerinWorldr"/>
+			</physvol>
+			<physvol name="Target_PV">
+				<volumeref ref="Target"/>
+				<positionref ref="TargetinWorldp"/>
+				<rotationref ref="TargetinWorldr"/>
+			</physvol>
+		</volume>
+	</structure>
+	<setup name="Default" version="1.0">
+		<world ref="World"/>
+	</setup>
+</gdml>
