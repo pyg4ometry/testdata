@@ -6,11 +6,11 @@
   <constant name="wby" value="100.0"/>
   <constant name="wbz" value="100.0"/>
 
-  <position name="v1" x="10" y="10" z="0" unit="m"/> 
-  <position name="v2" x="-10" y="10" z="0" unit="m"/> 
-  <position name="v3" x="-10" y="-10" z="0" unit="m"/> 
-  <position name="v4" x="10" y="-10" z="0" unit="m"/> 
-  <position name="v5" x="7" y="3" z="20" unit="m"/> 
+  <position name="v1" x="10" y="10" z="0" unit="m"/>
+  <position name="v2" x="-10" y="10" z="0" unit="m"/>
+  <position name="v3" x="-10" y="-10" z="0" unit="m"/>
+  <position name="v4" x="10" y="-10" z="0" unit="m"/>
+  <position name="v5" x="7" y="3" z="20" unit="m"/>
   <position name="v6" x="-3" y="7" z="5" unit="m"/>
 
   <position name="center" x="0" y="0" z="0"/>
@@ -49,7 +49,7 @@
     <triangular vertex1="v1" vertex2="v6" vertex3="v5" type="ABSOLUTE"/>
     <triangular vertex1="v6" vertex2="v3" vertex3="v5" type="ABSOLUTE"/>
     <quadrangular vertex1="v4" vertex2="v3" vertex3="v2" vertex4="v1" type="ABSOLUTE"/>
-  </tessellated>  
+  </tessellated>
 </solids>
 
 <structure>

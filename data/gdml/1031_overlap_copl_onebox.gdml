@@ -7,8 +7,8 @@
   <constant name="wbz" value="200.0"/>
 
   <constant name="bx" value="10.0"/>
-  
-  <position name="center"    x="0"   y="0"   z="0"/> 
+
+  <position name="center"    x="0"   y="0"   z="0"/>
   <rotation name="identity"  x="0"   y="0"   z="0"/>
 </define>
 
@@ -41,12 +41,12 @@
 
 <structure>
 
-  <volume name="boxVol"> 
+  <volume name="boxVol">
     <materialref ref="Air"/>
     <solidref ref="box"/>
   </volume>
 
-  <volume name="rowVol"> 
+  <volume name="rowVol">
     <materialref ref="Air"/>
     <solidref ref="row"/>
 
@@ -62,11 +62,11 @@
     <materialref ref="Air"/>
     <solidref ref="WorldBox"/>
 
-    <physvol>       
+    <physvol>
        <volumeref ref="rowVol"/>
        <position name="rowVol_pos" x="0" y="0" z="0"/>
        <rotationref ref="identity"/>
-    </physvol>      
+    </physvol>
   </volume>
 </structure>
 

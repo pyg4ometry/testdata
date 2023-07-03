@@ -27,7 +27,7 @@
         <zplane rmin="0" rmax="10" z="35" />
       </polyhedra>
    </solids>
-   
+
    <structure>
       <volume name="lvPolyh">
          <materialref ref="ALU"/>

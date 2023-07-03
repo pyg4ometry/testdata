@@ -7,7 +7,7 @@ BEAM
 * Define the beam position
 BEAMPOS
 GEOBEGIN                                                              COMBNAME
-    0    0          
+    0    0
 RPP  blackhole -200. 200. -200. 200. -200. 200.
 YCC ycc        0.0 0.0 50.0
 XZP cut1 100

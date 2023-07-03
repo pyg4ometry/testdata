@@ -1,11 +1,11 @@
 GEOBEGIN                                                              COMBNAME
-    0    0          
+    0    0
 * No transforms applied
 RPP rpp0       0.0 10. 0.0 10. 0.0 10.
 * Transform applied
 $start_transform trans
 RPP rpptrans    0.0 10. 0.0 10. 0.0 10.
-$end_transform 
+$end_transform
 RPP blackhole  -15. 15. -15. 15. -15. 15.
 END
 blackhol     5 +blackhole -rpp0 -rpptrans

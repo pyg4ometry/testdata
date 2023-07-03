@@ -7,7 +7,7 @@ BEAM
 * Define the beam position
 BEAMPOS
 GEOBEGIN                                                              COMBNAME
-    0    0          
+    0    0
 * Outer cut parabolic cylidner
 QUA parabo     0.06 0.0 0.0 0.0 0.0 0.0 0.0 1. 0.0 -20.
 XYP end1o      100.

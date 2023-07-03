@@ -19,7 +19,7 @@
       <box name="WorldBox" x="1000" y="1000" z="1000"/>
       <box name="Cube" x="100" y="100" z="100"/>
    </solids>
-   
+
    <structure>
       <volume name="lvCube">
          <materialref ref="ALU"/>

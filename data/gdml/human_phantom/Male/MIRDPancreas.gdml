@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <gdml xmlns:gdml="http://cern.ch/2001/Schemas/GDML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://service-spi.web.cern.ch/service-spi/app/releases/GDML/schema/gdml.xsd" >
- <define> 
+ <define>
   <constant name="PI" value="1.*pi" />
   <constant name="TWOPI" value="2.*pi"/>
   <constant name="HALFPI" value="0.5*pi"/>
- 
+
   <position name="FirstSubtrPancreasRelativePos" unit="cm" x="-2.87" y="0.0" z="-8.685" />
   <position name="PancreasPos" unit="cm" x="-0.72" y="0.0" z="1.8" />
   <rotation name="PancreasRot" unit="degree" x="0" y="90" z="0" />
- </define> 
+ </define>
 
  <materials>
   <material name="sH" formula=" " Z="1."><D value="0.00009" /><atom value="1.008"/></material>
@@ -26,7 +26,7 @@
   <material name="sCa" formula=" " Z="20."><D value="0.00155" /><atom value="40.08"/></material>
   <material name="sFe" formula=" " Z="26."><D value="0.00786" /><atom value="55.847"/></material>
   <material name="sZn" formula=" " Z="30."><D value="0.00714" /><atom value="65.37"/></material>
-  <material name="sRb" formula=" " Z="37."><D value="0.00153" /><atom value="85.47"/></material> 
+  <material name="sRb" formula=" " Z="37."><D value="0.00153" /><atom value="85.47"/></material>
   <material name="sSr" formula=" " Z="38."><D value="0.00260" /><atom value="87.62"/></material>
   <material name="sZr" formula=" " Z="40."><D value="0.00649" /><atom value="91.22"/></material>
   <material name="sPb" formula=" " Z="82."><D value="0.01140" /><atom value="207.19"/></material>
@@ -53,7 +53,7 @@
 
  <solids>
    <ellipsoid aunit="cm" lunit="cm" name="PancreasFirst" ax="2.87" by="1.14" cz="13.32" zcut1="-13.32" zcut2="0.0" />
-  <box aunit="cm" lunit="cm" name="SubtrPancreas" x="5.74" y="2.30" z="10.71" /> 
+  <box aunit="cm" lunit="cm" name="SubtrPancreas" x="5.74" y="2.30" z="10.71" />
   <subtraction name="Pancreas">
    <first ref="PancreasFirst" />
    <second ref="SubtrPancreas" />

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <gdml xmlns:gdml="http://cern.ch/2001/Schemas/GDML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://service-spi.web.cern.ch/service-spi/app/releases/GDML/schema/gdml.xsd" >
- <define> 
+ <define>
   <constant name="PI" value="1.*pi" />
   <constant name="TWOPI" value="2.*pi"/>
   <constant name="HALFPI" value="0.5*pi"/>
@@ -10,7 +10,7 @@
   <position name="SecondSubtrPelvisRelativePos" unit="cm" x="0.0" y="-11.76" z="0.0" />
   <position name="PelvisPos" unit="cm" x="0.0" y="-2.94" z="-21.635" />
   <rotation name="PelvisRot" unit="degree" x="0" y="0" z="0" />
- </define> 
+ </define>
 
  <materials>
   <material name="sH" formula=" " Z="1."><D value="0.00009" /><atom value="1.008"/></material>
@@ -28,7 +28,7 @@
   <material name="sCa" formula=" " Z="20."><D value="0.00155" /><atom value="40.08"/></material>
   <material name="sFe" formula=" " Z="26."><D value="0.00786" /><atom value="55.847"/></material>
   <material name="sZn" formula=" " Z="30."><D value="0.00714" /><atom value="65.37"/></material>
-  <material name="sRb" formula=" " Z="37."><D value="0.00153" /><atom value="85.47"/></material> 
+  <material name="sRb" formula=" " Z="37."><D value="0.00153" /><atom value="85.47"/></material>
   <material name="sSr" formula=" " Z="38."><D value="0.00260" /><atom value="87.62"/></material>
   <material name="sZr" formula=" " Z="40."><D value="0.00649" /><atom value="91.22"/></material>
   <material name="sPb" formula=" " Z="82."><D value="0.01140" /><atom value="207.19"/></material>
@@ -58,7 +58,7 @@
  <solids>
   <eltube aunit="cm" lunit="cm" name="PelvisOut" dx="10.35" dy="11.76" dz="9.915" />
   <eltube aunit="cm" lunit="cm" name="PelvisIn" dx="9.75" dy="11.07" dz="10.0" />
-  <box aunit="cm" lunit="cm" name="SubtrPelvis" x="20.71" y="23.52" z="19.84" /> 
+  <box aunit="cm" lunit="cm" name="SubtrPelvis" x="20.71" y="23.52" z="19.84" />
 
   <subtraction name="FirstPelvis">
    <first ref="PelvisOut" />

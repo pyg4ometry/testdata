@@ -7,7 +7,7 @@ BEAM
 * Define the beam position
 BEAMPOS
 GEOBEGIN                                                              COMBNAME
-    0    0          
+    0    0
 #define boxsize Cos(5.0)*10^5*(3+4)*Abs(-2)*Pipipi
 RPP bb         -10. 10. -10. 10. -10. 10.
 RPP blackhole  -15. 15. -15. 15. -15. 15.

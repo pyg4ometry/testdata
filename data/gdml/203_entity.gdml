@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<!DOCTYPE gdml [ 
+<!DOCTYPE gdml [
 <!ENTITY materials SYSTEM "203_materials.xml">
 ]>
 <gdml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://service-spi.web.cern.ch/service-spi/app/releases/GDML/schema/gdml.xsd">
@@ -11,7 +11,7 @@
 
  <!-- the content of the materials.xml file will be included here -->
 
- &materials; 
+ &materials;
 
  <solids>
   <box aunit="radian" lunit="mm" name="world_163515648" x="10000" y="10000" z="10000" />

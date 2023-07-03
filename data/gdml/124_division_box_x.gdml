@@ -20,7 +20,7 @@
      <box lunit="mm" name="MotherCube" x="800" y="100" z="100"/>
      <box name="Cube" x="50" y="50" z="50"/>
    </solids>
-   
+
    <structure>
       <volume name="lvCube">
          <materialref ref="ALU"/>

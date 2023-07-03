@@ -19,7 +19,7 @@
       <box name="WorldBox" x="1000" y="1000" z="1000"/>
       <trd name="Trd" x1="30" y1="40" x2="10" y2="15" z="60" lunit="mm"/>
    </solids>
-   
+
    <structure>
       <volume name="lvTrd">
          <materialref ref="ALU"/>

@@ -7,7 +7,7 @@ BEAM
 * Define the beam position
 BEAMPOS
 GEOBEGIN                                                              COMBNAME
-    0    0          
+    0    0
 RPP blackhole  -500. 500. -500. 500. -500. 500.
 $start_translat 25 25 25
 RPP rpp1       -50. 50. -50. 50. -50. 50.
